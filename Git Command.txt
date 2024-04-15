@@ -1,0 +1,100 @@
+$ git init
+Inisialisasi folder menjadi git
+
+$ git status
+untuk check status file yg blm di stagging dll
+
+$ git add <nama file>
+menambahkan file ke staging
+
+$ git add .
+menambahkan semua file ke staging
+
+
+$ git rm --cached <nama file>
+untuk unstaging file
+
+$ git config --global user.name "<name>"
+$ git config --global user.email "<name>"
+
+$ git commit -m "<pesan>"
+$ git commit -am <pesan> untuk langsung commit file yg modified
+
+$ git log
+
+$ git log -3
+lihat log commit 3 terakhir
+
+$ git log -- <nama file>
+log dari 1 file
+
+$ git checkout <first 5 digit hash> -- <nama file>
+untuk mengembalikan file/restore ke kondisi state sesuai hash versi nya
+
+$ git branch
+list branch yg ada
+
+$ git branch <nama_branch>
+create new branch
+
+$ git checkout <nama_branch>
+pindah branch
+
+$ git merge <nama_branch>
+menggabungkan branch
+
+vim :wq!
+
+$ git branch -d <nama_branch>
+hapus branch
+
+$ git branch -D <nama_branch>
+hapus branch meski blm di merge
+
+$ git log --all --decorate --oneline --graph
+untuk visualisasi branch
+
+$ alias graph="git log --all --decorate --oneline --graph"
+untuk buat alias
+
+$git config --global user.name "<username>"
+$git config --global user.email "<email>"
+
+$ git clone <url>
+get repo dari luar
+
+$ git push
+push commit an ke remote
+
+$ git remote add origin https://[PERSONALACCESSTOKEN]@github.com/[USERNAME]/[REPO].git
+git remote add origin https://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@github.com/anto91github/belajar-laravel.git
+https://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@github.com/anto91github/belajar-php.git
+https://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@github.com/anto91github/belajar-VueJs.git
+set remote yg namanya origin ke github
+
+untuk mendapat personal accesstoken
+https://github.com/settings/profile, klik developer settings, cari personal access tokens
+
+
+$ git remote
+cek nama remote
+
+$ git remote -v
+cek alamat remote
+
+$ git push -u origin main
+push commit ke origin, branch main, -u artinya upstream, jadi nanti cukup ketik "git push" saja, otomatis ke origin
+
+$ git push <nama remote> <nama branch>
+
+$ git fetch
+cek repo yg di remote sudah sampai mana, agar ketika git status terupdate
+
+$ git pull
+mengambil perubahan yg ada di remote
+
+$ git merge <nama_remote>/<nama branch>
+mengambil perubahan dari repo tertentu
+
+$ git rebase <nama branch>
+mengabungkan cabang ke main/master tanpa melakukan three way merge
